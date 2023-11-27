@@ -3,7 +3,7 @@ const id = urlParams.get("id")
 const url= `https://botafogo-atletas.mange.li/${id}`
 async function dadosApi(url){
     const loading = document.getElementById("loading")
-    loading.style.display = "block"
+    loading.style.display = "flex"
     const dados = await fetch(url)
     loading.style.display = "none"
     return dados.json()

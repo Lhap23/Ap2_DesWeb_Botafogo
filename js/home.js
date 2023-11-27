@@ -12,25 +12,23 @@ btn_sair.onclick = ()=>{window.location.href = "index.html"}
 
 
 const btn_feminino = document.getElementById("btn-1")
-btn_feminino.onclick = ()=>{dadosApi("https://botafogo-atletas.mange.li/feminino").then((r)=>{cria_jogadores(r, "Elenco Feminino")})}
+btn_feminino.onclick = ()=>{dadosApi("https://botafogo-atletas.mange.li/feminino").then((r)=>{cria_jogadores(r)})}
 const btn_masculono = document.getElementById("btn-2")
-btn_masculono.onclick = ()=>{dadosApi("https://botafogo-atletas.mange.li/masculino").then((r)=>{cria_jogadores(r, "Elenco Masculino")})}
+btn_masculono.onclick = ()=>{dadosApi("https://botafogo-atletas.mange.li/masculino").then((r)=>{cria_jogadores(r)})}
 const btn_todos = document.getElementById("btn-3")
-btn_todos.onclick = ()=>{dadosApi("https://botafogo-atletas.mange.li/all").then((r)=>{cria_jogadores(r, "Elenco do Botafogo")})}
+btn_todos.onclick = ()=>{dadosApi("https://botafogo-atletas.mange.li/all").then((r)=>{cria_jogadores(r)})}
 
 async function dadosApi(url){
     const loading = document.getElementById("loading")
-    loading.style.display = "block"
+    loading.style.display = "flex"
     const dados = await fetch(url)
     loading.style.display = "none"
     return dados.json()
 }
 
-function cria_jogadores(jogadores, titulo){
+function cria_jogadores(jogadores){
     const div_atletas = document.getElementById("atletas")
     div_atletas.innerHTML = " " 
-    const titulo_elenco = document.getElementById("elenco-nome")
-    titulo_elenco.textContent = titulo
 
     for (const jogador of jogadores) {
         
