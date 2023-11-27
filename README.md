@@ -29,6 +29,10 @@ Este repositório contém o trabalho de desenvolvimento web para a disciplina de
 
 A solução está publicada no GitHub Pages e visa emular o comportamento da página: [Página de Exemplo](https://p2-2023-2-desweb.mange.li/).
 
+## Projeto Realizado
+
+[Link:](https://lhap23.github.io/Ap2_DesWeb_Botafogo/).
+
 ## Instalação e Uso
 
 [Instruções sobre como clonar, instalar dependências, e rodar o projeto localmente.]
