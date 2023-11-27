@@ -7,12 +7,8 @@ if(localStorage.getItem("islogged") !== "true"){
 
 
 const btn_sair = document.getElementById("btn-sair")
-btn_sair.onclick = sair
+btn_sair.onclick = ()=>{window.location.href = "index.html"}
 
-
-function sair(){
-
-}
 
 
 const btn_feminino = document.getElementById("btn-1")
@@ -53,7 +49,7 @@ function cria_jogadores(jogadores, titulo){
         bio.classList.add("bio");
         
         
-        const nome = document.createElement('h2')
+        const nome = document.createElement('h1')
         nome.textContent = jogador.nome;
         nome.classList.add("nome");
         
@@ -63,8 +59,8 @@ function cria_jogadores(jogadores, titulo){
         
         
         card_jogador.appendChild(img)
-        bio.appendChild(pos)
         bio.appendChild(nome)
+        bio.appendChild(pos)
         
         card_jogador.appendChild(bio)
         div_atletas.appendChild(card_jogador)

@@ -1,5 +1,6 @@
-const id = URLSearchParams(window.location.search).get("id")
-
+const urlParams = new URLSearchParams(window.location.search)
+const id = urlParams.get("id")
+const url= `https://botafogo-atletas.mange.li/${id}`
 async function dadosApi(url){
     const loading = document.getElementById("loading")
     loading.style.display = "block"
@@ -8,7 +9,7 @@ async function dadosApi(url){
     return dados.json()
 }
 
-if (sessionStorage.getItem("islogged") == "true")
+if (localStorage.getItem("islogged") === "true")
 {    dadosApi(url).then(
         (r) => {
             
@@ -21,6 +22,7 @@ if (sessionStorage.getItem("islogged") == "true")
             const nascimento = document.getElementById("nascimento")
 
 
+
             img.src = r.imagem
             nome.textContent = r.nome
             nome_completo.textContent = r.nome_completo
@@ -30,9 +32,9 @@ if (sessionStorage.getItem("islogged") == "true")
             nascimento.textContent = r.nascimento
 
 
-            const voltar = document.getElementById('button')
-            voltar.onclick = () => {window.location.href = 'index.html'}
-}
+            const voltar = document.getElementById('btn-voltar')
+            voltar.onclick = () => {window.location.href = 'home.html'}
+}           
     )
 
 } else {

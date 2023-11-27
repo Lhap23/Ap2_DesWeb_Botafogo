@@ -12,15 +12,67 @@
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.187);
     }
 }
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Vina+Sans&display=swap');
+body{
+    font-family: 'Oxygen', sans-serif;
+    background-color: rgb(242, 242, 242);
+}
 
+
+.card-jogador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card-jogador .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-jogador .bio h1{
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 30px;
+}
+.card-jogador .bio h2{
+    font-size: 15px;
+}
+
+
+.card-jogador img:hover {
+    animation: descolar 0.6s forwards;
+}
 .card-jogador img {
     border-radius: 20px;
-    border: 6px solid rgb(171, 171, 171);
-    margin: 50px;
+    border: 10px solid rgb(171, 171, 171);
     transform-origin: bottom right;
     transition: transform 0.3s ease;
 }
 
-.card-jogador img:hover {
-    animation: descolar 0.6s forwards;
+
+
+button {
+
+    color: black;
+    margin: 4px;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 60px;
+    font-size: 18px;
+    border-style: none;
+    background-color: lightgrey;
+}
+button:hover{
+    color: black;
+    background-color: darkgrey;
+}
+input {
+    color: #000000;
+    margin: 5px;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 60px;
+    font-size: 15px;
+    background-color: white;
 }
