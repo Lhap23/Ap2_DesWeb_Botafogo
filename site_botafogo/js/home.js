@@ -39,7 +39,7 @@ function cria_jogadores(jogadores, titulo){
     for (const jogador of jogadores) {
         
         const card_jogador = document.createElement('div')
-        card_jogador.classList.add("card_jogador");
+        card_jogador.classList.add("card-jogador");
 
         const img = document.createElement('img')
         img.src = jogador.imagem;
@@ -70,7 +70,7 @@ function cria_jogadores(jogadores, titulo){
         div_atletas.appendChild(card_jogador)
 
         card_jogador.onclick = ()=>{
-            window.location.href = `detalhe.html?${jogador.id}`
+            window.location.href = `detalhe.html?id=${jogador.id}`
         }
 
     }

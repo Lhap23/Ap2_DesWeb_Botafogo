@@ -1,0 +1,26 @@
+@keyframes descolar {
+    0%{
+        transform: scale(1) rotateX(0) rotateY(0);
+        box-shadow: none;
+    }
+    50% {
+        transform: scale(1.1) rotateX(15deg) rotateY(15deg);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    }
+    100%{
+        transform: scale(1.1) rotateX(0) rotateY(0);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.187);
+    }
+}
+
+.card-jogador img {
+    border-radius: 20px;
+    border: 6px solid rgb(171, 171, 171);
+    margin: 50px;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.card-jogador img:hover {
+    animation: descolar 0.6s forwards;
+}

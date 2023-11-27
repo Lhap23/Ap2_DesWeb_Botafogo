@@ -11,7 +11,6 @@ async function dadosApi(url){
 if (sessionStorage.getItem("islogged") == "true")
 {    dadosApi(url).then(
         (r) => {
-            const detalhe = document.getElementById('detalhe')
             
             const img = document.getElementById("img")
             const nome = document.getElementById("nome")
