@@ -31,7 +31,7 @@ A solução está publicada no GitHub Pages e visa emular o comportamento da pá
 
 ## Projeto Realizado
 
-[Link:](https://lhap23.github.io/Ap2_DesWeb_Botafogo/).
+[lhap23.github.io/Ap2_DesWeb_Botafogo](https://lhap23.github.io/Ap2_DesWeb_Botafogo/).
 
 ## Instalação e Uso
 
