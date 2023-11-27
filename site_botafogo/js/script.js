@@ -12,8 +12,10 @@ function login(){
     const senha = hex_md5(login_input.value)
     if (localStorage.getItem("senha") === senha){
         window.location.href = "home.html"
+        localStorage.setItem("islogged", "true")
     } else {
         alert("A senha passada é incorreta")
+        localStorage.setItem("islogged", "false")
     }
 
 }
